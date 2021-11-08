@@ -63,7 +63,9 @@ let indefinido = undefined;
 //     typeof indefinido);
 
 // JSON - JavaScript Object Notation
-// Dentro de JSON se pueden almacenar colecciones de datos
+// Dentro de JSON se pueden almacenar colecciones
+// en forma de objetos, siendo estos una abstracción
+// de la vida real
 let pelicula = {
     titulo: "Space Jam",
     genero: "Animación",
@@ -76,6 +78,74 @@ let pelicula = {
         `;
     }
 };
-console.log(pelicula.mostrar());
 // Dentro de un JSON podemos definir un objeto
 // darle propiedades, e incluso darle metodos
+// los objetos JSON pueden ser manipulados de muchas formas
+// se puede cambiar el valor de sus propiedades
+// por ejemplo podemos quitarle su valor
+// con un objeto null
+pelicula.genero = null;
+// a su vez, tambien podemos eliminar por completo
+// una propiedad usando el prefijo delete
+delete pelicula.anio;
+// a su vez tambien podemos añadir propiedades nuevas
+// lo unico que tenemos que hacer es pasar el nombre
+// de la propiedad dentro de corchetes o despues un .
+pelicula.pais = "USA";
+// peliculas.pais = "USA";
+// console.log("titulo" in pelicula);
+
+// tambien podemos recorrer todas las propiedades de
+// un objeto JSON con un bucle de for
+// declaramos un indice y podemos usarlo para recorrer
+for (let propiedades in pelicula) {
+    // podemos guardar el indice algual en otra variable
+    let datoActual = pelicula[propiedades];
+    // tambien podemos comparar las propiedades
+    if (datoActual !== null && typeof datoActual !== "function") {
+        // console.log(datoActual);
+    }
+
+}
+
+// Symbol es una variable para asignar valores unicos
+// esto se refiere a que apesar de que do variables
+// tengan el mismo valor, estas son reconocidas como distinta
+let animal = Symbol("tigre");
+let animal2 = Symbol("tigre");
+
+// console.log(animal);
+// console.log(animal2);
+// console.log(animal == animal2);
+// otra opcion que tenemos con symbol es añadir
+// propiedades que se llamen igual, pero que tengan
+// un valor distinto, ademas de que estas propiedades
+// se encuentran oculas, es decir que si la llamamos
+// la consola no nos mostrara el nombre de dicha
+// propiedad del objeto.
+let user = {
+    id: 1,
+    nombre: "Edgar Ulises",
+    web: "Trongar.dev"
+};
+// para poder añadir la propiedad nueva al objeto
+// debemos declararala previamente
+let id = Symbol('id');
+// con eso listo podemos asignarle un valor
+user[id] = 8;
+// console.log(user.id, user[id]);
+
+
+// Concatenacion opcional
+
+// en algunos casos desearemos optener el valor 
+// de una propiedad de algun objeto
+// dicho objeto o propiedad puede o no existir
+// por lo que se puede decir que se definicion
+// es ambigua, para solventar esto en JS
+// tenemos la concatenacion obcional
+// la cual consiste en verificar si la propiedad esta
+// definidia o no, para hacer esto solo debemos
+// añadir un ? despues da la variable
+variable = {}
+// console.log(variable.valor?.propiedad);
