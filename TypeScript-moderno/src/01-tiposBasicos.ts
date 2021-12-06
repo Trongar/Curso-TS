@@ -19,6 +19,7 @@ verdadero = false;
 
 let normal:any = 121312;
 normal = true;
+normal = "asta pronto";
 
 
 let persona:string = "Edgar Ulises";

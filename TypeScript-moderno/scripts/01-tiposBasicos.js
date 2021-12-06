@@ -12,6 +12,7 @@ verdadero = false;
 // verdadero = 0;   
 let normal = 121312;
 normal = true;
+normal = "asta pronto";
 let persona = "Edgar Ulises";
 // persona = undefined;
 // persona = null;
