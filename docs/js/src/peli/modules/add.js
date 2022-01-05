@@ -17,7 +17,7 @@ export default class Add {
             // conseguir datos actualizados
             let pelis = this.storage.getData();
             let lastId = this.storage.getLastId();
-            console.log(pelis, lastId);
+            // console.log(pelis, lastId);
             // datos a guardar
             let title = this.title.value;
             let description = this.description.value;
